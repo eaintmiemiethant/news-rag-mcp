@@ -1,3 +1,17 @@
+# Project Note (Important)
+Due to GitHub repository size limitations, the Data, Infra, and Models directories have been removed from this repository.
+These components are essential for running the full project but are too large to be hosted directly on GitHub.
+
+The complete project, including all removed directories, can be downloaded from the Google Drive link below:
+
+``` link
+
+https://drive.google.com/file/d/1osNUHw2ekNSaCU0_Xw4wJeYEzGwee7SQ/view
+```
+
+Please download the full package from the link and place the folders in the appropriate locations as described in the project structure.
+
+
 # News RAG + MCP — AWS Free‑Tier Starter
 
 This repository is a **walking skeleton** for your dissertation project, optimized for the AWS Free Tier. It deploys:
