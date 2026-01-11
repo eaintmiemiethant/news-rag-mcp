@@ -1,0 +1,36 @@
+{
+  "Comment": "MCP-style routing (stub)",
+  "StartAt": "Classify",
+  "States": {
+    "Classify": {
+      "Type": "Pass",
+      "ResultPath": "$.classification",
+      "Result": {
+        "label": "neutral",
+        "confidence": 0.75
+      },
+      "Next": "Route"
+    },
+    "Route": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.classification.label",
+          "StringEquals": "emergency",
+          "Next": "Alert"
+        }
+      ],
+      "Default": "Archive"
+    },
+    "Alert": {
+      "Type": "Pass",
+      "Result": "sent",
+      "End": true
+    },
+    "Archive": {
+      "Type": "Pass",
+      "Result": "archived",
+      "End": true
+    }
+  }
+}
